@@ -1,4 +1,4 @@
-package ita;
+package ita.sort;
 
 public class InsertionSort implements SimpleSort {
   @Override
