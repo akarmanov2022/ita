@@ -13,6 +13,12 @@ public class HeapSort implements SimpleSort {
         return numbers;
     }
 
+    private void buildMaxHeaoify(int[] numbers, int heapSize) {
+        for (int i = Math.floorDiv(heapSize, 2); i >= 0; i--) {
+            maxHeapify(numbers, i, heapSize);
+        }
+    }
+    
     private void maxHeapify(int[] numbers, int index, int heapSize) {
         var left = left(index);
         var right = right(index);
@@ -31,12 +37,6 @@ public class HeapSort implements SimpleSort {
         }
     }
 
-    private void buildMaxHeaoify(int[] numbers, int heapSize) {
-        for (int i = Math.floorDiv(heapSize, 2); i >= 0; i--) {
-            maxHeapify(numbers, i, heapSize);
-        }
-    }
-
     private void exchange(int[] numbers, int first, int second) {
         var copy = numbers[first];
         numbers[first] = numbers[second];
@@ -51,7 +51,4 @@ public class HeapSort implements SimpleSort {
         return 2 * i;
     }
 
-    private int parent(int i) {
-        return i / 2;
-    }
 }
