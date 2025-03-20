@@ -1,4 +1,4 @@
-package ita.sort;
+package me.akarmanov.ita.sort;
 
 import org.junit.jupiter.api.Test;
 
@@ -14,8 +14,8 @@ class HeapSortTest {
                 .ints(20, 10, 100)
                 .toArray();
         SimpleSort sort = new HeapSort();
-        sort.sort(numbers);
         int[] expected = Arrays.stream(numbers).sorted().toArray();
+        sort.sort(numbers);
 
         assertArrayEquals(expected, numbers);
     }

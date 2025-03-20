@@ -1,4 +1,4 @@
-package ita.sort;
+package me.akarmanov.ita.sort;
 
 public class HeapSort implements SimpleSort {
     @Override
@@ -18,7 +18,7 @@ public class HeapSort implements SimpleSort {
             maxHeapify(numbers, i, heapSize);
         }
     }
-    
+
     private void maxHeapify(int[] numbers, int index, int heapSize) {
         var left = left(index);
         var right = right(index);

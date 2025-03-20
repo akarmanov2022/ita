@@ -1,4 +1,4 @@
-package ita.sort;
+package me.akarmanov.ita.sort;
 
 public class InsertionSort implements SimpleSort {
   @Override
